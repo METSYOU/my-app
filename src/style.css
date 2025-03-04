@@ -208,16 +208,16 @@ nav ul li a:hover::after{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: var(--bg-color);
     gap:10rem;
-    border: 1px solid white;
     background-color: var(--second-bg-color);
     background: linear-gradient(to right, var(--bg-color), var(--second-bg-color));
 }
 
 .about-image{
-    border:1px solid red;
     position: relative;
     left:10%;
+    background: var(--bg-color);
 }
 
 
@@ -225,12 +225,13 @@ nav ul li a:hover::after{
     width: 400px;
     height: 400px;
     position: relative;
+    border-radius: 25px;
 }
 
 .about-content{
     width: 50%;
     position: relative;
-    left: 8%;
+    left: 5%;
 }
 
 
@@ -239,13 +240,13 @@ nav ul li a:hover::after{
         width: 70%;
         margin-top: 10%;
         text-align: left;
-        background: linear-gradient(to right, white,var(--main-color)); /* Left to right gradient */
+        background: linear-gradient(to right, white,var(--main-color));
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        border: 1px solid white;
         position: relative;
-    
+        text-align: justify;
+        text-justify:inter-word;
 }
 
 
@@ -261,6 +262,30 @@ nav ul li a:hover::after{
     font-weight: 700;
 }
 
+.about-image-overlay{
+    width: 550px;
+    background-color: rgba(16,16,16, 0.9);
+    border-radius: 25px;
+    position: relative;
+    bottom: 40px;
+    right: 80px;
+}
+
+.about-image h3{
+    font-size: 20px;
+    margin:20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: linear-gradient(to right, #A9A9A9,var(--main-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: lighter;
+    text-align: justify;
+    text-justify:inter-word;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 ::-webkit-scrollbar{
     width: 10px;
 }
@@ -270,3 +295,48 @@ nav ul li a:hover::after{
 ::-webkit-scrollbar-track{
     background-color: var(--bg-color);
 }
+
+.card {
+    width: 60vw;
+    height: 100vh;
+    background: rgba(20, 50, 100, 0.8);
+    color: #080808;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: sticky;
+    top: -100px;
+    margin: auto;
+    border-radius: 25px;
+    text-align: center;
+    padding-top: 100px;
+    gap: 20px;
+}
+
+.card h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    padding: 10px 20px;
+    width: auto;
+}
+
+.card h2 {
+    font-size: 20px;
+    color: white;
+    padding: 10px 20px;
+    width: auto;
+}
+
+.card p {
+    font-size: 18px;
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+    align-self: flex-start;
+    padding-left: 120px;
+}
+
+
