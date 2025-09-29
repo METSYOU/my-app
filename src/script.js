@@ -59,39 +59,75 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         function updateProjectsStackAnimation() {
+            const workSectionRect = workSection.getBoundingClientRect();
             const workSectionTop = workSection.offsetTop;
             const scrollTop = window.scrollY;
             const windowHeight = window.innerHeight;
             
-            const scrollProgress = scrollTop - workSectionTop + windowHeight * 0.5;
+            // Calculate scroll progress within the work section
+            const sectionScrollStart = workSectionTop - windowHeight * 0.2;
+            const sectionScrollProgress = scrollTop - sectionScrollStart;
             
             projectCards.forEach((card, index) => {
-                const cardStart = index * windowHeight * 0.8;
-                const cardEnd = (index + 1) * windowHeight * 0.8;
+                const cardRect = card.getBoundingClientRect();
+                const cardTop = card.offsetTop;
                 
-                const cardProgress = (scrollProgress - cardStart) / (windowHeight * 0.8);
+                // Calculate when this card should start animating
+                const cardStartScroll = index * (windowHeight * 0.8);
+                const cardProgress = (sectionScrollProgress - cardStartScroll) / (windowHeight * 0.8);
                 
+                // Default state - card is below viewport
                 if (cardProgress < 0) {
-                    card.style.transform = 'translateY(100vh) scale(0.8)';
+                    card.style.transform = 'translateY(20vh) scale(0.95)';
+                    card.style.opacity = '0';
                     card.style.zIndex = index;
-                } else if (cardProgress >= 0 && cardProgress < 1) {
-                    const translateY = Math.max(0, (1 - cardProgress) * 0);
-                    const scale = 0.8 + (cardProgress * 0.2);
-                    
-                    card.style.transform = `translateY(${translateY}vh) scale(${Math.min(scale, 1)})`;
-                    card.style.zIndex = 100 + index;
-                } else {
-                    const pushProgress = Math.min((cardProgress - 1) * 2, 1);
-                    const translateY = -pushProgress * 30;
-                    const scale = 1 - (pushProgress * 0.1);
+                } 
+                // Card is entering and sticking
+                else if (cardProgress >= 0 && cardProgress < 1) {
+                    const easeProgress = easeOutCubic(cardProgress);
+                    const translateY = (1 - easeProgress) * 20;
+                    const scale = 0.95 + (easeProgress * 0.05);
+                    const opacity = Math.min(1, cardProgress * 2);
                     
                     card.style.transform = `translateY(${translateY}vh) scale(${scale})`;
+                    card.style.opacity = opacity;
+                    card.style.zIndex = 100 + index;
+                } 
+                // Card is stuck and being pushed up by next card
+                else {
+                    const pushProgress = Math.min((cardProgress - 1) * 1.5, 1);
+                    const easeOutProgress = easeInCubic(pushProgress);
+                    const translateY = -easeOutProgress * 15;
+                    const scale = 1 - (easeOutProgress * 0.05);
+                    const opacity = 1 - (easeOutProgress * 0.3);
+                    
+                    card.style.transform = `translateY(${translateY}vh) scale(${scale})`;
+                    card.style.opacity = opacity;
                     card.style.zIndex = 100 + index;
                 }
             });
         }
 
-        window.addEventListener('scroll', updateProjectsStackAnimation);
+        function easeOutCubic(x) {
+            return 1 - Math.pow(1 - x, 3);
+        }
+
+        function easeInCubic(x) {
+            return x * x * x;
+        }
+
+        let ticking = false;
+        function onScroll() {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateProjectsStackAnimation();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
         updateProjectsStackAnimation();
     }
 
@@ -246,7 +282,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const navCenter = document.querySelector('.nav-center');
                 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
                 
-                if (navCenter.classList.contains('mobile-active')) {
+                if (navCenter && navCenter.classList.contains('mobile-active')) {
                     navCenter.classList.remove('mobile-active');
                     mobileMenuBtn.classList.remove('active');
                 }
