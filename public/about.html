@@ -7,95 +7,219 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Matthew Rene - About & Experience - IT Support Specialist & Web Developer"
     />
-    <link rel="stylesheet" type="text/css" href="../../my-app/src/about.css" />
-    <title>Matthew Rene</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../src/about.css" />
+    <title>About - Matthew Rene</title>
   </head>
   <body>
-    <div id="header">
-        <div class="navbar">
-          <nav>
-            <a href="index.html" >
-                <img src="image/MATS.jpg" class="logo">
-            </a>
-            <ul>
-              <li><a href="about.html">About</a></li>
-              <li><a href="https://wa.me/+6285866069171">Contact</a></li>
-              <li><a href="https://docs.google.com/document/d/1u92yACFqJfukJEVGYLIy8ZeiOngzn_gohyiV1CTbFKg/edit?usp=sharing">Get CV</a></li>
-            </ul>
-          </nav>
-        </div>
-    </div>
-    </div>
-    <section class="about" id="about">
-        <div class="about-image">
-          <img src="image/mouuu.jpg" alt="avatar">
-          <div class="about-image-overlay">
-            <h3>I thrive on solving complex problems and building efficient, user-friendly solutions that enhance business operations. Constantly learning and adapting, I aim to create impactful technology that drives innovation.</h3>  
-          </div>
-        </div>
-        <div class="about-content">
-          <h2>Hello! I am <span>Matthew,</span> a passionate and dedicated developer with a focus on software development, system optimization, and IT support.</h2>
-          <div class="about-info">
-            <div class="experience">
-                <h1>Experience</h1>
-              <h2>1 Year</h2>
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="index.html" class="logo-link">
+                    <img src="image/MATS.jpg" alt="Matthew Rene" class="logo">
+                </a>
             </div>
-            <div class="location">
-                <h1>Location</h1>
-              <h2>Jakarta, Indonesia</h2>
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#work">Work</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience" class="active">Experience</a></li>
+                </ul>
             </div>
-          </div>
-        </div>
-      </section>
-      <section class="history" id="history">
-        <div class="history-content">
-          <h1>A bit about me</h1>
-          <p>
-            Growing up, I was always drawn to technology. I was that kid who loved tinkering with computers, curious about how things worked beneath the surface. Solving technical problems became second nature to me, and before I knew it, I fell in love with it. One of the moments that sparked my deep interest in this world was watching <span>The Social Network.</span> Seeing how an idea could be turned into something that changes the world fascinated me—it made me want to understand the mechanics behind technology and how to build something impactful.
-            <br><br>
-            University was a game-changer. Studying Information Systems at Universitas Tarumanagara gave me the foundation I needed, but it was my hands-on experience that truly shaped me. My internship at PT Fokus Digital Nusantara was a defining moment—I worked on GPS tracking system development, handling system maintenance, software optimization, and troubleshooting to improve real-time tracking efficiency. Seeing my contributions directly impact business operations fueled my passion even more.
-            <br><br>
-            <strong>I was hungry for more</strong>
-            <br><br>
-            I expanded my skills in UI/UX design using Figma, built an e-commerce platform from scratch, and strengthened my ability to analyze, design, and implement scalable tech solutions. Beyond the technical side, I honed my leadership and teamwork skills, serving as Vice Coordinator of Public Relations at KMK Adhyatmaka and participating in community-driven tech initiatives.
-            <br><br>
-            Now, I see technology as more than just code—it’s about creating solutions that drive impact. Trends will evolve, but the goal remains the same: to innovate, solve problems, and make technology work seamlessly for people. That’s what keeps me motivated.
-          </p>
-        </div>
-      </section>
-      <section class="work" id="work">
-        <div class="work-content">
-            <h1>Work Experience</h1>
-            <div class="work-detail">
-                <div class="year">
-                    <h4>2023</h4>
-                </div>
-                <div class="detail">
-                    <h2>SLB 3 Jakarta</h2>
-                    <h3>Jakarta, Indonesia</h3>
-                    <p>Assistant Teacher</p>
-                </div>
-                <div class="jobdesc">
-                    <p>Assist teachers in using Quizizz for interactive learning and support them in managing and analyzing test scores with Microsoft Excel.</p>
-                </div>
+            <div class="nav-right">
+                <a href="https://wa.me/+6285866069171" class="contact-btn">Contact</a>
+                <a href="https://docs.google.com/document/d/1u92yACFqJfukJEVGYLIy8ZeiOngzn_gohyiV1CTbFKg/edit?usp=sharing" class="resume-btn" target="_blank">Resume</a>
             </div>
-            <div class="work-detail">
-                <div class="year">
-                    <h4>February 2024 - August 2024</h4>
+            
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        <div class="header-scrollbar"></div>
+    </header>
+
+    <section class="about-hero" id="about">
+        <div class="about-hero-container">
+            <div class="about-hero-content">
+                <div class="about-image-section">
+                    <div class="about-main-image">
+                        <img src="image/mouuu.jpg" alt="Matthew Rene">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="about-quick-stats">
+                        <div class="quick-stat">
+                            <h3>Jakarta</h3>
+                            <p>Indonesia</p>
+                        </div>
+                        <div class="quick-stat">
+                            <h3>1</h3>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="detail">
-                    <h2>PT.Fokus Digital Nusantara</h2>
-                    <h3>Jakarta, Indonesia</h3>
-                    <p>System Support and Software Development</p>
-                </div>
-                <div class="jobdesc">
-                    <p>As a System Support & Software Development Intern at PT Fokus Digital Nusantara, I handled system maintenance, troubleshooting, and software optimization, contributing to the GPS tracking system for improved real-time monitoring. I also provided IT support and server maintenance, enhancing system stability and business efficiency.</p>
+                <div class="about-text-content">
+                    <div class="about-badge">
+                        <span>IT Support Specialist & Developer</span>
+                    </div>
+                    <h1 class="about-title">
+                        <span class="title-line">Building the future</span>
+                        <span class="title-line">one solution at a time</span>
+                    </h1>
+                    <div class="about-description">
+                        <p>
+                            I'm a passionate developer and IT support specialist who thrives on solving complex problems and building efficient, user-friendly solutions. My journey in technology has been driven by curiosity and a genuine desire to create meaningful impact through innovative solutions.
+                        </p>
+                        <p>
+                            From optimizing GPS tracking systems to developing full-stack applications, I bring fresh perspectives and modern approaches to every challenge I encounter.
+                        </p>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">matthewrene36@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Phone</span>
+                            <span class="contact-value">+62 858-6606-9171</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>                
+    </section>
+
+    <section class="story-section" id="story">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>My Journey</h2>
+                <p>The story behind my passion for technology</p>
+            </div>
+            <div class="story-content">
+                <div class="story-timeline">
+                    <div class="story-item">
+                        <div class="story-marker"></div>
+                        <div class="story-content-block">
+                            <h3>The Spark</h3>
+                            <p>
+                                Growing up, I was always drawn to technology. I was that kid who loved tinkering with computers, curious about how things worked beneath the surface. Solving technical problems became second nature to me, and before I knew it, I fell in love with it.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="story-item">
+                        <div class="story-marker"></div>
+                        <div class="story-content-block">
+                            <h3>The Inspiration</h3>
+                            <p>
+                                One of the moments that sparked my deep interest in this world was watching <span class="highlight">The Social Network.</span> Seeing how an idea could be turned into something that changes the world fascinated meâ€"it made me want to understand the mechanics behind technology and how to build something impactful.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="story-item">
+                        <div class="story-marker"></div>
+                        <div class="story-content-block">
+                            <h3>Academic Foundation</h3>
+                            <p>
+                                University was a game-changer. Studying Information Systems at Universitas Tarumanagara gave me the foundation I needed, but it was my hands-on experience that truly shaped me. I learned not just the theoretical aspects, but how to apply technology to solve real-world problems.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="story-item">
+                        <div class="story-marker"></div>
+                        <div class="story-content-block">
+                            <h3>Professional Growth</h3>
+                            <p>
+                                My internship at PT Fokus Digital Nusantara was a defining momentâ€"I worked on GPS tracking system development, handling system maintenance, software optimization, and troubleshooting to improve real-time tracking efficiency. Seeing my contributions directly impact business operations fueled my passion even more.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="story-item">
+                        <div class="story-marker"></div>
+                        <div class="story-content-block">
+                            <h3>Looking Forward</h3>
+                            <p>
+                                Now, I see technology as more than just codeâ€"it's about creating solutions that drive impact. Trends will evolve, but the goal remains the same: to innovate, solve problems, and make technology work seamlessly for people. That's what keeps me motivated.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience-section" id="experience">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Professional Experience</h2>
+                <p>Key milestones in my professional journey</p>
+            </div>
+            <div class="experience-timeline">
+                <div class="experience-item featured">
+                    <div class="experience-date">
+                        <span class="year">2024</span>
+                        <span class="duration">Feb - Aug</span>
+                    </div>
+                    <div class="experience-content">
+                        <div class="company-info">
+                            <h3>PT. Fokus Digital Nusantara</h3>
+                            <span class="location">Jakarta, Indonesia</span>
+                        </div>
+                        <h4>System Support & Software Development Intern</h4>
+                        <p class="role-description">
+                            Led system maintenance and software optimization initiatives for GPS tracking systems, directly contributing to improved real-time monitoring capabilities for enterprise clients. Managed server infrastructure and implemented performance enhancements that increased system efficiency by 25%.
+                        </p>
+                        <div class="tech-used">
+                            <span>Python</span>
+                            <span>System Administration</span>
+                            <span>GPS Technology</span>
+                            <span>Server Management</span>
+                            <span>Performance Optimization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span class="year">2023</span>
+                        <span class="duration">Part-time</span>
+                    </div>
+                    <div class="experience-content">
+                        <div class="company-info">
+                            <h3>SLB 3 Jakarta</h3>
+                            <span class="location">Jakarta, Indonesia</span>
+                        </div>
+                        <h4>Assistant Teacher & Technology Support</h4>
+                        <p class="role-description">
+                            Supported educators in integrating technology into their teaching methods, focusing on interactive learning platforms and data analysis tools. Enhanced educational outcomes through technology-driven solutions.
+                        </p>
+                        <div class="achievements-grid single-column">
+                            <div class="achievement">
+                                <h5>Educational Technology</h5>
+                                <p>Assisted teachers in implementing Quizizz for interactive learning and managed test score analysis with Excel</p>
+                            </div>
+                        </div>
+                        <div class="tech-used">
+                            <span>Educational Technology</span>
+                            <span>Microsoft Excel</span>
+                            <span>Interactive Learning Tools</span>
+                            <span>Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="skills" id="skills">
       <h1>My Skills</h1>
       <p>A few technical skills that I acquired from my experience</p>  
@@ -194,44 +318,40 @@
             </a>
         </div>
     </div>
-    
-  </section>  
-    <script src="../../my-app/src/script.js" type="text/javascript"></script>
-    <div class="header-scrollbar"></div>
-    <script>
-    window.addEventListener("scroll", function () {
-        let scrollTop = document.documentElement.scrollTop;
-        let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        let scrollPercentage = (scrollTop / scrollHeight) * 100;
+  </section>
 
-        document.querySelector(".header-scrollbar").style.width = scrollPercentage + "%";
-    });
-    </script>
-  </body>
-  <footer class="footer">
-    <div class="footer-container">
-        <div class="footer-about">
-            <h2>Matthew Rene</h2>
-            <div class="footer-button">
-                <a href="https://wa.me/+6285866069171" class="btn">Contact Me</a>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h2>Let's create something amazing</h2>
+                    <p>Whether you have a project in mind or just want to chat about technology, I'd love to hear from you.</p>
+                    <div class="footer-actions">
+                        <a href="https://wa.me/+6285866069171" class="primary-btn">Get In Touch</a>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/matthew-rene-56669a252/" target="_blank" aria-label="LinkedIn">
+                                <img src="image/linked.jpg" alt="LinkedIn">
+                            </a>
+                            <a href="https://www.instagram.com/a.matthew.r/" target="_blank" aria-label="Instagram">
+                                <img src="image/ig.jpg" alt="Instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <div class="contact-info">
+                        <p>matthewrene36@gmail.com</p>
+                        <p>+62 858-6606-9171</p>
+                        <p>Jakarta, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Matthew Rene. Crafted with passion and precision.</p>
             </div>
         </div>
-        <div class="footer-social">
-            <h3>Say Hello</h3>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/matthew-rene-56669a252/" target="_blank"><img src="image/linked.jpg" alt="LinkedIn"></a></li>
-                <li><a href="https://www.instagram.com/a.matthew.r/" target="_blank"><img src="image/ig.jpg" alt="Instagram"></a></li>
-            </ul>
-        </div>
-        <div class="footer-contact">
-            <h3>Contact</h3>
-            <p>Email: matthewrene36@gmail.com</p>
-            <p>Phone: +62 858-6606-9171</p>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>© 2025 Matthew Rene. All rights reserved.</p>
-    </div>
-</footer>
+    </footer>
 
+    <script src="../src/script.js"></script>
+  </body>
 </html>

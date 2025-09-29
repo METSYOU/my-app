@@ -7,110 +7,141 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Matthew Rene - IT Support Specialist & Web Developer Portfolio"
     />
-    <link rel="stylesheet" type="text/css" href="../../my-app/src/style.css" />
-    <title>Matthew Rene</title>
+    <link rel="stylesheet" type="text/css" href="../src/style.css" />
+    <title>Matthew Rene - Developer & IT Support</title>
   </head>
   <body>
-    <div id="header">
-        <div class="navbar">
-          <nav>
-            <a href="index.html" >
-                <img src="image/MATS.jpg" class="logo">
-            </a>
-            <ul>
-              <li><a href="about.html">About</a></li>
-              <li><a href="https://wa.me/+6285866069171">Contact</a></li>
-              <li><a href="https://docs.google.com/document/d/1u92yACFqJfukJEVGYLIy8ZeiOngzn_gohyiV1CTbFKg/edit?usp=sharing">Get CV</a></li>
-            </ul>
-          </nav>
-        </div>
-    </div>
-    <section class="home" id="home">
-      <div class="home-content">
-          <div class="header-text">
-              <h1>IT Support and <span><br>Web Developer<br></span></h1>
-          </div>
-          <div class="header-image">
-              <img src="image/mou.jpg" alt="avatar">
-          </div>
-          <div class="header-paragraph">
-              <p>Hello there, I'm <span>Matthew</span> - a fresh graduate developer specializing in website development, and IT support. Based in Indonesia.</p>
-          </div>
-          <div class="row">
-              <p>Say Hi</p>
-              <div class="column">
-                  <a href="https://www.linkedin.com/in/matthew-rene-56669a252/"><img src="image/linked.jpg"></a>
-              </div>
-              <div class="column">
-                  <a href="https://www.instagram.com/a.matthew.r/"><img src="image/ig.jpg"></a>
-              </div>
-          </div>
-          <div class="contact-button">
-              <a href="https://wa.me/+6285866069171" class="btn">Contact Me</a>
-          </div>
-      </div>
-  </section>
-  
-    <div class="stack" id="stack">
-      <div class="card">
-        <a href="https://docs.google.com/document/d/1fEc6eXa8FrLTscglMK0HpxsR2p8X9t6cjJ5K74GKVBw/edit?usp=sharing" 
-           class="card-link" target="_blank"></a>
-        <div class="card-header">
-            <h3>2024</h3>
-            <h4>Web Development</h4>
-        </div>
-        <div class="card-content">
-            <h1>College Capstone Project</h1>
-            <h2>For my capstone project, I made a basic website for a store that sells diesel machine spare parts.</h2>
-            <p><strong>Skills:</strong> HTML5, CSS3, Figma, MySQL, PHP, Problem Solving</p>
-            <img src="image/mockup.jpg" width="600px" alt="Project Mockup">
-        </div>
-    </div>         
-      <div class="card1">
-        <div class="card-header">
-            <h3>2024</h3>
-            <h4>Internship</h4>
-        </div>
-        <h1>Internship at PT. Fokus Digital Nusantara</h1>
-        <div class="system">
-            <div class="support">
-                <h5>System Support</h5>
-                <p>Maintained servers, troubleshooted issues, and optimized systems for smooth operations at PT Fokus Digital Nusantara and its clients.</p>
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="index.html" class="logo-link">
+                    <img src="image/MATS.jpg" alt="Matthew Rene" class="logo">
+                </a>
             </div>
-            <div class="develop">
-                <h6>Software Development</h6>
-                <p>Contributed to GPS tracking system development, optimized software performance, and ensured seamless system functionality at PT Fokus Digital Nusantara.</p>
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        <div class="header-scrollbar"></div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-profile-pic">
+                <img src="image/mou.jpg" alt="Matthew Rene">
+            </div>
+            
+            <div class="hero-main-content">
+                <h1 class="hero-title">
+                    <span class="title-line">WEB DEVELOPER &</span>
+                    <span class="title-line accent">IT SUPPORT</span>
+                </h1>
+                
+                <div class="hero-bottom-section">
+                    <div class="hero-left">
+                        <a href="https://wa.me/+6285866069171" class="say-hello-btn">SAY HELLO</a>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/matthew-rene-56669a252/" target="_blank" aria-label="LinkedIn">
+                                <img src="image/linked.jpg" alt="LinkedIn">
+                            </a>
+                            <a href="https://www.instagram.com/a.matthew.r/" target="_blank" aria-label="Instagram">
+                                <img src="image/ig.jpg" alt="Instagram">
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-center">
+                        <p class="hero-description">
+                            Hello there, I am Matthew a fresh graduate developer specializing in system support, troubleshooting, and modern web development. Based in Jakarta, Indonesia.
+                        </p>
+                    </div>
+                    
+                    <div class="hero-right">
+                        <a href="https://wa.me/+6285866069171" class="contact-me-btn">Contact Me</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <p>Skills: Problem Solving, Python, Team work, Odoo, Server Maintenance, Usablity Testing </p>
-        <img src="image/FODIRA.png" width="600px">
-    </div>
-    <div class="card2">
-      <div class="card-header">
-        <h3>2025</h3>
-        <h4>Web development</h4>
-      </div>
-      <h1>Valentine's Day Card</h1>
-      <h2>A Valentine’s Day website that can be interacted and engaging platform designed to celebrate love and romance. </h2>
-      <p>Skills: HTML5 and CSS3</p>
-      <img src="image/muck.jpg" width="600px">
-    </div>
-    
-    </div>
-    <section class="about" id="about">
-      <div class="about-image">
-        <img src="image/mouuu.jpg" alt="avatar">
-        <div class="about-image-overlay">
-          <h3>I thrive on solving complex problems and building efficient, user-friendly solutions that enhance business operations. Constantly learning and adapting, I aim to create impactful technology that drives innovation.</h3>  
-        </div>
-      </div>
-      <div class="about-content">
-        <h2>Hello! I am <span>Matthew,</span> a passionate and dedicated developer with  focus on software development, system optimization, and IT support.</h2>
-      </div>
     </section>
-    <section class="skills" id="skills">
+
+    <section class="work" id="work">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+            </div>
+            
+            <div class="projects-container">
+                <div class="project-card" data-index="0">
+                    <div class="project-header">
+                        <span class="project-number">01 | WEB APPLICATION</span>
+                    </div>
+                    <div class="project-mockup">
+                        <img src="image/moviedb.jpg" alt="Movie Database Platform">
+                    </div>
+                    <div class="project-info">
+                        <h3>Movie Database Platform</h3>
+                        <p>A comprehensive movie discovery platform built with React, featuring real-time search, detailed movie information, and responsive design optimized for all devices.</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-index="1">
+                    <div class="project-header">
+                        <span class="project-number">02 | E-COMMERCE PLATFORM</span>
+                    </div>
+                    <div class="project-mockup">
+                        <img src="image/mockup.jpg" alt="E-Commerce Platform">
+                    </div>
+                    <div class="project-info">
+                        <h3>Diesel Parts E-Commerce</h3>
+                        <p>Comprehensive e-commerce platform for diesel machine spare parts featuring inventory management, user authentication, and admin dashboard developed as capstone project.</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-index="2">
+                    <div class="project-header">
+                        <span class="project-number">03 | INTERACTIVE EXPERIENCE</span>
+                    </div>
+                    <div class="project-mockup">
+                        <img src="image/muck.jpg" alt="Valentine's Interactive">
+                    </div>
+                    <div class="project-info">
+                        <h3>Valentine's Day Experience</h3>
+                        <p>Engaging Valentine's Day website with beautiful animations and interactive elements, showcasing creative design and smooth user experience.</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-index="3">
+                    <div class="project-header">
+                        <span class="project-number">04 | SYSTEM OPTIMIZATION</span>
+                    </div>
+                    <div class="project-mockup">
+                        <img src="image/FODIRA.png" alt="GPS System">
+                    </div>
+                    <div class="project-info">
+                        <h3>GPS Tracking Enhancement</h3>
+                        <p>Enhanced GPS tracking system performance during internship at PT Fokus Digital Nusantara, focusing on real-time monitoring and server optimization.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="skills" id="skills">
       <h1>My Skills</h1>
       <p>A few technical skills that I acquired from my experience</p>  
       <div class="skills-wrapper">
@@ -208,43 +239,40 @@
             </a>
         </div>
     </div>
-    
   </section>  
-    <script src="../../my-app/src/script.js" type="text/javascript"></script>
-    <div class="header-scrollbar"></div>
-    <script>
-    window.addEventListener("scroll", function () {
-        let scrollTop = document.documentElement.scrollTop;
-        let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        let scrollPercentage = (scrollTop / scrollHeight) * 100;
 
-        document.querySelector(".header-scrollbar").style.width = scrollPercentage + "%";
-    });
-    </script>
-  </body>
-  <footer class="footer">
-    <div class="footer-container">
-        <div class="footer-about">
-            <h2>Matthew Rene</h2>
-            <div class="footer-button">
-                <a href="https://wa.me/+6285866069171" class="btn">Contact Me</a>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h2>Got an idea?</h2>
+                    <p>Ready for a development adventure, or need technical advice? Ping me for collaboration opportunities.</p>
+                    <div class="footer-actions">
+                        <a href="https://wa.me/+6285866069171" class="primary-btn">Share with me</a>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/matthew-rene-56669a252/" target="_blank" aria-label="LinkedIn">
+                                <img src="image/linked.jpg" alt="LinkedIn">
+                            </a>
+                            <a href="https://www.instagram.com/a.matthew.r/" target="_blank" aria-label="Instagram">
+                                <img src="image/ig.jpg" alt="Instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <div class="contact-info">
+                        <p>matthewrene36@gmail.com</p>
+                        <p>+62 858-6606-9171</p>
+                        <p>Jakarta, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Matthew Rene. All rights reserved.</p>
             </div>
         </div>
-        <div class="footer-social">
-            <h3>Say Hello</h3>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/matthew-rene-56669a252/" target="_blank"><img src="image/linked.jpg" alt="LinkedIn"></a></li>
-                <li><a href="https://www.instagram.com/a.matthew.r/" target="_blank"><img src="image/ig.jpg" alt="Instagram"></a></li>
-            </ul>
-        </div>
-        <div class="footer-contact">
-            <h3>Contact</h3>
-            <p>Email: matthewrene36@gmail.com</p>
-            <p>Phone: +62 858-6606-9171</p>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>© 2025 Matthew Rene. All rights reserved.</p>
-    </div>
-</footer>
+    </footer>
+
+    <script src="../src/script.js"></script>
+  </body>
 </html>
